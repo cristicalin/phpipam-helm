@@ -38,6 +38,8 @@ spec:
               value: {{ .Values.global.database.name }}
             - name: "IPAM_DATABASE_WEBHOST"
               value: "%"
+            - name: "IPAM_TRUST_X_FORWARDED"
+              value: "true"
             - name: "IPAM_DATABASE_PASS"
               valueFrom:
                 secretKeyRef:
