@@ -24,7 +24,7 @@ spec:
       {{- end }}
       containers:
         - name: {{ .Values.phpipam.name }}
-          image: cristicalin/ipam-www:v1.7.3.100-3f40e93e
+          image: cristicalin/ipam-www:v1.7.3.100-f485f2dc
           ports:
             - containerPort: {{ .Values.phpipam.service.port }}
               protocol: TCP
