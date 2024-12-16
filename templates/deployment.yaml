@@ -47,6 +47,8 @@ spec:
                 secretKeyRef:
                   name: {{ .Release.Name }}-{{ .Chart.Name }}-secrets
                   key: {{ .Chart.Name }}-mysql-pass
+            - name: "IPAM_TRUST_X_FORWARDED"
+              value: "true"
           {{- if .Values.phpipam.widgets }}
           volumeMounts:
           {{- range $key, $value := .Values.phpipam.widgets }}
