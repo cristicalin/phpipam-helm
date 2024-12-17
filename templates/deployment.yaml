@@ -24,7 +24,7 @@ spec:
       {{- end }}
       containers:
         - name: {{ .Values.phpipam.name }}
-          image: "{{ .Values.web.image.repository }}:{{ .Values.web.image.tag | default .Chart.AppVersion }}"
+          image: "{{ .Values.phpipam.image.repository }}:{{ .Values.phpipam.image.tag | default .Chart.AppVersion }}"
           ports:
             - containerPort: {{ .Values.phpipam.service.port }}
               protocol: TCP
